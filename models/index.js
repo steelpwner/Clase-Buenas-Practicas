@@ -4,7 +4,7 @@ const config = require("../config/");
 const sequelize = new Sequelize(config.database, config.user, config.password, {
     host: config.host,
     dialect: "mysql",
-    logging: false
+    logging: false,
 });
 
 const Client = require("./clients")(sequelize, Sequelize.DataTypes)
